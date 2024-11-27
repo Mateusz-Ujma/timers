@@ -9,6 +9,11 @@
  align-items: center;
 }
 
+.not-visible {
+ display: none;
+ width: 0;
+}
+
 button {
  background-color: rgb(8, 217, 214);
  border: none;
@@ -39,6 +44,22 @@ button:hover {
  font-size: 1rem;
  width: 100px;
  height: 40px;
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+ -moz-box-shadow: 0px 0px 1024px 0px rgba(3, 233, 229, .45);
+ box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+}
+
+button:disabled {
+ background-color: rgb(0, 119, 115);
+ border: none;
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(37, 42, 52);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1rem;
  -webkit-box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
  -moz-box-shadow: 0px 0px 1024px 0px rgba(3, 233, 229, .45);
  box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);

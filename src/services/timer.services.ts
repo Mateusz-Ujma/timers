@@ -17,11 +17,10 @@ export class TimerServices {
     { time: 232323, name: 'Play Games' },
     { time: 232323, name: 'Play Games' },
     { time: 232323, name: 'Play Games' },
-    { time: 232323, name: 'Play Games' },
+    { time: 323, name: 'Play Games' },
   ];
   changeShow(value: boolean) {
     this.isShowAddTimer = value;
-    console.log(this.isShowAddTimer);
   }
   getShow(): boolean {
     return this.isShowAddTimer;

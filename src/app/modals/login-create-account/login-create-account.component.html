@@ -1,4 +1,5 @@
-<div [class]="loginVisible?'login':'not-visible'">
+<div *ngIf="loginVisible"
+ class="login">
  <p>Login</p>
  <label for="login">Login</label>
  <input type="text"
@@ -10,7 +11,8 @@
   id="password">
  <button>Login</button>
 </div>
-<div [class]="cAVisible?'create-account':'not-visible'">
+<div *ngIf="!loginVisible"
+ class="create-account">
  <p>Create Account</p>
  <label for="loginCA">Login</label>
  <input type="text"
@@ -26,3 +28,5 @@
   id="rep-password">
  <button>Create Account</button>
 </div>
+<button class="close"
+ (click)="close()">X</button>

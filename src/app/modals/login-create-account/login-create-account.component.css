@@ -22,9 +22,6 @@
  box-shadow: 0px 0px 10px 0px rgba(255, 46, 99, .45);
 }
 
-.not-visible {
- display: none;
-}
 
 .login {
  display: flex;
@@ -168,4 +165,25 @@
  font-weight: 400;
  font-style: normal;
  font-size: 1rem;
+}
+
+.close {
+ position: absolute;
+ top: 0;
+ right: 0;
+ margin: 15px;
+ background-color: #00000000;
+ border: none;
+ color: white;
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 900;
+ font-style: normal;
+ font-size: 1.3rem;
+ transition: text-shadow 0.3s;
+
+}
+
+.close:hover {
+ text-shadow: 0px 0px 9px rgba(255, 255, 255, 0.685);
 }
