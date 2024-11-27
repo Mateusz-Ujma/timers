@@ -1,0 +1,32 @@
+<p>Add New Timer</p>
+<label for="name">Timer Name</label>
+<input type="text"
+ id="name"
+ name="name"
+ [(ngModel)]="name">
+<label for="hour">Hour</label>
+<input type="number"
+ id="hour"
+ name="hour"
+ [(ngModel)]="hour"
+ [defaultValue]="0"
+ max="24" />
+<label for="hour">Minutes</label>
+<input type="number"
+ id="minutes"
+ name="minutes"
+ [(ngModel)]="minutes"
+ max="60">
+<label for="hour">Seconds</label>
+<input type="number"
+ id="seconds"
+ name="seconds"
+ [(ngModel)]="seconds"
+ [defaultValue]="0"
+ max="60">
+<div class="btn-wrapper">
+ <button (click)="addTimer()">Add</button>
+ <button (click)="closeWindow()">Close</button>
+</div>
+<p class="warn"
+ *ngIf="isWarn">Maximum value is 24H:60M:60S</p>

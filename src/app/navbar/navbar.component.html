@@ -1,0 +1,8 @@
+<div class="wrapper">
+ <button (click)="changeShow(true)">Add Timer</button>
+ <p>TIMERS</p>
+ <app-login-create-account></app-login-create-account>
+ <app-add-new-timer *ngIf="isShowAddTimer"
+  (isShow)="changeShow(false)"></app-add-new-timer>
+ <button>Login</button>
+</div>

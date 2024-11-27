@@ -1,0 +1,11 @@
+<fieldset [classList]="isStart?'is-started':'main-wrapper'">
+ <legend>{{name}}</legend>
+ <p [classList]="isEnd?'is-end':''">{{time | sectomin}}</p>
+ <div class="btn-wrapper">
+  <button (click)="start()"
+   [disabled]="isStart">Start</button>
+  <button (click)="reset()">Reset</button>
+  <button (click)="pause()"
+   [disabled]="!isStart">Pause</button>
+  <button (click)="deleteT()">Delete</button>
+ </div>

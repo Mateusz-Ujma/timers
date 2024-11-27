@@ -1,0 +1,171 @@
+:host {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: absolute;
+ top: 45%;
+ left: 50%;
+ transform: translateX(-50%) translateY(-50%);
+
+ max-width: 45%;
+ min-width: 500px;
+ height: clamp(550px, 600px, 700px);
+ min-height: 450px;
+ background-color: rgb(37, 42, 52);
+ border: 1px solid rgb(255, 46, 99);
+ border-radius: 7px;
+ gap: 20px;
+
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 46, 99, .45);
+ -moz-box-shadow: 0px 0px 1024px 0px rgba(255, 46, 99, .45);
+ box-shadow: 0px 0px 10px 0px rgba(255, 46, 99, .45);
+}
+
+.not-visible {
+ display: none;
+}
+
+.login {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+}
+
+.login>p {
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(255, 255, 255);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 2.4rem;
+}
+
+.login>input {
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(0, 0, 0);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.7rem;
+}
+
+.login>button {
+ background-color: rgb(8, 217, 214);
+ border: none;
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(37, 42, 52);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.4rem;
+ width: 110px;
+ transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.login>button:hover {
+ background-color: rgb(3, 233, 229);
+ border: none;
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(37, 42, 52);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.4rem;
+ width: 110px;
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+ -moz-box-shadow: 0px 0px 1024px 0px rgba(3, 233, 229, .45);
+ box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+}
+
+.login>label {
+ color: rgb(255, 255, 255);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: normal;
+ font-size: 1rem;
+}
+
+.create-account {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+}
+
+.create-account>p {
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(255, 255, 255);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 2.4rem;
+}
+
+.create-account>input {
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(0, 0, 0);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.7rem;
+}
+
+.create-account>button {
+ background-color: rgb(8, 217, 214);
+ border: none;
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(37, 42, 52);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.1rem;
+ width: 150px;
+ transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.create-account>button:hover {
+ background-color: rgb(3, 233, 229);
+ border: none;
+ padding: 5px;
+ border-radius: 7px;
+ color: rgb(37, 42, 52);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.1rem;
+ width: 150px;
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+ -moz-box-shadow: 0px 0px 1024px 0px rgba(3, 233, 229, .45);
+ box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+}
+
+.create-account>label {
+ color: rgb(255, 255, 255);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: normal;
+ font-size: 1rem;
+}

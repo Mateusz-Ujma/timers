@@ -1,0 +1,126 @@
+:host {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: absolute;
+ top: 45%;
+ left: 50%;
+ transform: translateX(-50%) translateY(-50%);
+
+ max-width: 45%;
+ min-width: 500px;
+ height: 65%;
+ min-height: 650px;
+ background-color: rgb(37, 42, 52);
+ border: 1px solid rgb(255, 46, 99);
+ border-radius: 7px;
+ gap: 20px;
+
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 46, 99, .45);
+ -moz-box-shadow: 0px 0px 1024px 0px rgba(255, 46, 99, .45);
+ box-shadow: 0px 0px 10px 0px rgba(255, 46, 99, .45);
+}
+
+p {
+ font-size: 2rem;
+ color: rgb(234, 234, 234);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 800;
+ font-style: normal;
+ margin-top: 0px;
+ margin-bottom: 20px;
+}
+
+.warn {
+ text-align: center;
+ font-size: 1.3rem;
+ color: rgb(253, 51, 51);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 800;
+ font-style: normal;
+ margin-top: 0px;
+ margin-bottom: 20px;
+}
+
+label {
+ font-size: 1.5rem;
+ color: rgb(234, 234, 234);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: normal;
+}
+
+
+
+input[type=text] {
+ font-size: 1.3rem;
+ color: rgb(0, 0, 0);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: normal;
+ border-radius: 7px;
+ transition: box-shadow 0.3s;
+ border: none;
+ padding: 5px;
+}
+
+input[type=text]:hover {
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+ -moz-box-shadow: 0px 0px 1024px 0px rgba(3, 233, 229, .45);
+ box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+
+}
+
+input[type=number] {
+ font-size: 1.3rem;
+ color: rgb(0, 0, 0);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: normal;
+ border-radius: 7px;
+ transition: box-shadow 0.3s;
+ border: none;
+ padding: 5px;
+}
+
+input[type=number]:hover {
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+ -moz-box-shadow: 0px 0px 1024px 0px rgba(3, 233, 229, .45);
+ box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+
+}
+
+.btn-wrapper {
+ display: flex;
+ gap: 10px;
+ background-color: none;
+
+}
+
+button {
+ border: none;
+ background-color: rgb(8, 217, 214);
+ height: 30px;
+ width: 80px;
+ border-radius: 7px;
+ color: rgb(37, 42, 52);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.1rem;
+ transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+button:hover {
+ background-color: rgb(3, 233, 229);
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+ -moz-box-shadow: 0px 0px 1024px 0px rgba(3, 233, 229, .45);
+ box-shadow: 0px 0px 10px 0px rgba(3, 233, 229, .45);
+}
