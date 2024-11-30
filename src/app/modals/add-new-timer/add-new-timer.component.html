@@ -3,6 +3,8 @@
 <input type="text"
  id="name"
  name="name"
+ placeholder="Timer Name"
+ ng-required="true"
  [(ngModel)]="name">
 <label for="hour">Hour</label>
 <input type="number"
@@ -29,4 +31,9 @@
  <button (click)="closeWindow()">Close</button>
 </div>
 <p class="warn"
- *ngIf="isWarn">Maximum value is 24H:60M:60S</p>
+ *ngIf="isWarn">{{temp2?"Value can't be zero at
+ all":"Maximum value is 99H:99M:99S"}}</p>
+
+
+<p class="warn"
+ *ngIf="isNotTName">Add name</p>

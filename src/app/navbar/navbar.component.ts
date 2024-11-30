@@ -20,9 +20,7 @@ export class NavbarComponent implements OnInit {
   constructor(private ts: TimerServices, private ls: LoginServices) {
     this.isShowAddTimer = this.ts.getShow();
   }
-  ngOnInit(): void {
-    this.test();
-  }
+  ngOnInit(): void {}
 
   changeShow(value: boolean) {
     this.ts.changeShow(value);
@@ -41,6 +39,4 @@ export class NavbarComponent implements OnInit {
     this.ls.setIsOpen(value);
     this.visible = this.ls.getIsOpen();
   }
-
-  test() {}
 }
