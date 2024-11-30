@@ -15,12 +15,14 @@ import { LoginServices } from '../../services/login.services';
 export class NavbarComponent implements OnInit {
   visible: boolean = this.ls.getIsOpen();
   isShowAddTimer = this.ts.getShow();
-  @Output() test: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   loginVisible: boolean = this.ls.getLoginV();
   constructor(private ts: TimerServices, private ls: LoginServices) {
     this.isShowAddTimer = this.ts.getShow();
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.test();
+  }
 
   changeShow(value: boolean) {
     this.ts.changeShow(value);
@@ -39,4 +41,6 @@ export class NavbarComponent implements OnInit {
     this.ls.setIsOpen(value);
     this.visible = this.ls.getIsOpen();
   }
+
+  test() {}
 }

@@ -9,13 +9,11 @@ export class LoginServices {
     return this.isOpen;
   }
   getLoginV() {
-    console.log('get login', this.loginVisible);
     return this.loginVisible;
   }
 
   setLoginV(newValue: boolean) {
     this.loginVisible = newValue;
-    console.log('set login', this.loginVisible);
   }
 
   setIsOpen(newValue: boolean) {

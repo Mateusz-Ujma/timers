@@ -6,16 +6,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SectominPipe implements PipeTransform {
   transform(value: number): string {
-    const dateObj = new Date(value * 1000);
-    const hours = dateObj.getUTCHours();
-    const minutes = dateObj.getUTCMinutes();
-    const seconds = dateObj.getSeconds();
+    const hours = Math.floor(value / 3600);
+
+    const minutes = Math.floor((value - hours * 3600) / 60);
+    const seconds = value - hours * 3600 - minutes * 60;
     const timeString =
       hours.toString().padStart(2, '0') +
       ':' +
       minutes.toString().padStart(2, '0') +
       ':' +
       seconds.toString().padStart(2, '0');
+
     return timeString;
   }
 }
