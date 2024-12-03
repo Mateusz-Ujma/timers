@@ -1,9 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { TimerServices } from '../../services/timer.services';
+import { TimerServices } from '../../services/timer.service';
 import { AddNewTimerComponent } from '../modals/add-new-timer/add-new-timer.component';
 import { CommonModule } from '@angular/common';
 import { LoginCreateAccountComponent } from '../modals/login-create-account/login-create-account.component';
-import { LoginServices } from '../../services/login.services';
+import { LoginServices } from '../../services/login.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,10 +18,26 @@ export class NavbarComponent implements OnInit {
   isShowAddTimer = this.ts.getShow();
 
   loginVisible: boolean = this.ls.getLoginV();
-  constructor(private ts: TimerServices, private ls: LoginServices) {
+  constructor(
+    private ts: TimerServices,
+    private ls: LoginServices,
+    public authS: AuthService
+  ) {
     this.isShowAddTimer = this.ts.getShow();
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.authS.user$.subscribe((user: any) => {
+      if (user) {
+        this.authS.currentUserSig.set({
+          email: user.email!,
+          username: user.displayName!,
+        });
+      } else {
+        this.authS.currentUserSig.set(null);
+      }
+      console.log(this.authS.currentUserSig());
+    });
+  }
 
   changeShow(value: boolean) {
     this.ts.changeShow(value);
@@ -34,6 +51,9 @@ export class NavbarComponent implements OnInit {
       this.ls.setLoginV(false);
     }
     this.visible = true;
+  }
+  logout() {
+    this.authS.logout();
   }
   close(value: boolean) {
     this.ls.setIsOpen(value);

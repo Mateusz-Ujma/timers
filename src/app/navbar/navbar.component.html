@@ -1,15 +1,21 @@
 <div class="wrapper">
- <button (click)="changeShow(true)">Add Timer</button>
- <p>TIMERS</p>
- <app-login-create-account *ngIf="visible"
-  (isClose)="close(false)"></app-login-create-account>
- <app-add-new-timer *ngIf="isShowAddTimer"
-  (isShow)="changeShow(false)"></app-add-new-timer>
- <div>
-  <button (click)="openWindow('login')"
-   [disabled]="visible">Login</button>
-  <button (click)="openWindow('res')"
-   [disabled]="visible">Register</button>
- </div>
+  <button (click)="changeShow(true)">Add Timer</button>
+  <p>TIMERS</p>
+  <app-login-create-account *ngIf="visible"
+    (isClose)="close(false)"></app-login-create-account>
+  <app-add-new-timer *ngIf="isShowAddTimer"
+    (isShow)="changeShow(false)"></app-add-new-timer>
+  <div>
+    @if(authS.currentUserSig()===null){
+    <button (click)="openWindow('login')"
+      [disabled]="visible">Login</button>
+    <button (click)="openWindow('res')"
+      [disabled]="visible">Register</button>
+    }
+    @if(authS.currentUserSig()){
+    {{authS.currentUserSig()?.username}}
+    <button (click)="logout()">Logout</button>
+    }
+  </div>
 
 </div>

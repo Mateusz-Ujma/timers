@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { TimerPanelComponent } from './timer-panel/timer-panel.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
-import { LoginServices } from '../services/login.services';
+import { LoginServices } from '../services/login.service';
 
 @Component({
   selector: 'app-root',

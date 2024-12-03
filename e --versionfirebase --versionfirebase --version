@@ -1,0 +1,29 @@
+[33mcommit c9c61e6268d8c78db1946709ee0c5f3aa3a0fbf8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Mateusz-Ujma <mateuszujma99@gmail.com>
+Date:   Sat Nov 30 16:15:25 2024 +0100
+
+    add timer validation
+
+[33mcommit 8f0e151398659ae53f6e1b6e119a05ca331a7a50[m
+Author: Mateusz-Ujma <mateuszujma99@gmail.com>
+Date:   Sat Nov 30 15:42:02 2024 +0100
+
+    rework pipe
+
+[33mcommit 336a8867e61839065d5a08ea7d3973a53b583e66[m
+Author: Mateusz-Ujma <mateuszujma99@gmail.com>
+Date:   Wed Nov 27 16:47:42 2024 +0100
+
+    upgrade login/register UI
+
+[33mcommit 42ecfb4456638dc3e23a9c9684a1c6c8bb56ac90[m
+Author: Mateusz-Ujma <mateuszujma99@gmail.com>
+Date:   Wed Nov 27 13:53:16 2024 +0100
+
+    init
+
+[33mcommit 1509eed86bfa7482d2b86fcbca9d0b972c2e33f1[m
+Author: Mateusz-Ujma <mateuszujma99@gmail.com>
+Date:   Mon Oct 21 15:36:59 2024 +0200
+
+    initial commit

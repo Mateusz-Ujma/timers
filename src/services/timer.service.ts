@@ -5,19 +5,9 @@ export class TimerServices {
   isShowAddTimer = false;
   timer: { time: number; name: string }[] = [
     { time: 2323, name: 'Free Time' },
-    { time: 2323, name: 'Free Time' },
-    { time: 2323, name: 'Free Time' },
-    { time: 2323, name: 'Play Games' },
-    { time: 222322, name: 'tst' },
-    { time: 232323, name: 'Play Games' },
-    { time: 232320, name: 'Play Games' },
-    { time: 232323, name: 'Play Games' },
-    { time: 232323, name: 'Play Games' },
-    { time: 232323, name: 'Play Games' },
-    { time: 232323, name: 'Play Games' },
-    { time: 232323, name: 'Play Games' },
-    { time: 232323, name: 'Play Games' },
-    { time: 323, name: 'Play Games' },
+    { time: 3323, name: 'Free Time' },
+    { time: 2823, name: 'Free Time' },
+    { time: 8323, name: 'Play Games' },
   ];
   changeShow(value: boolean) {
     this.isShowAddTimer = value;

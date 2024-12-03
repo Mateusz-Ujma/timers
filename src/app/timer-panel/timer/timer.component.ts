@@ -1,6 +1,6 @@
 import { Component, Input, Pipe, PipeTransform } from '@angular/core';
 import { SectominPipe } from '../../sectomin.pipe';
-import { TimerServices } from '../../../services/timer.services';
+import { TimerServices } from '../../../services/timer.service';
 
 @Pipe({
   name: 'minuteSeconds',

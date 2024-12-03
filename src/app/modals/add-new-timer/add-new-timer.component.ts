@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { TimerServices } from '../../../services/timer.services';
+import { TimerServices } from '../../../services/timer.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -32,7 +32,7 @@ export class AddNewTimerComponent {
   }
   addTimer() {
     let temp: number = this.hour * 3600 + this.minutes * 60 + this.seconds;
-    console.log(this.name);
+
     this.temp2 = this.hour === 0 && this.minutes === 0 && this.seconds === 0;
 
     if (

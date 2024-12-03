@@ -1,15 +1,20 @@
 <div *ngIf="loginVisible"
  class="login">
  <p>Login</p>
- <label for="login">Login</label>
+ <label for="email">E-mail</label>
  <input type="text"
-  name="login"
-  id="login">
+  name="email"
+  id="email"
+  [(ngModel)]="emailLogin">
  <label for="password">Password</label>
  <input type="text"
   name="password"
-  id="password">
- <button>Login</button>
+  id="password"
+  [(ngModel)]="passwordLogin">
+ @if(errorMessageLogin){
+ <p class="errorMessage">{{errorMessageLogin}}</p>
+ }
+ <button (click)="login()">Login</button>
 </div>
 <div *ngIf="!loginVisible"
  class="create-account">
@@ -17,16 +22,27 @@
  <label for="loginCA">Login</label>
  <input type="text"
   name="loginCA"
-  id="loginCA">
+  id="loginCA"
+  [(ngModel)]="loginCA">
+ <label for="emailCA">Email</label>
+ <input type="email"
+  name="emailCA"
+  id="emailCA"
+  [(ngModel)]="emailCA">
  <label for="passwordCA">Password</label>
  <input type="text"
   name="passwordCA"
-  id="passwordCA">
+  id="passwordCA"
+  [(ngModel)]="passwordCA">
  <label for="rep-password">Repeat Password</label>
  <input type="text"
   name="rep-password"
-  id="rep-password">
- <button>Create Account</button>
+  id="rep-password"
+  [(ngModel)]="repPasswordCA">
+ @if(errorMessageCA){
+ <p class="errorMessage">{{errorMessageCA}}</p>
+ }
+ <button (click)="register()">Create Account</button>
 </div>
 <button class="close"
  (click)="close()">X</button>

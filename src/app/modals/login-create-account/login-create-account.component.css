@@ -10,7 +10,7 @@
 
  max-width: 45%;
  min-width: 500px;
- height: clamp(550px, 600px, 700px);
+ height: clamp(550px, 750px, 800px);
  min-height: 450px;
  background-color: rgb(37, 42, 52);
  border: 1px solid rgb(255, 46, 99);
@@ -186,4 +186,22 @@
 
 .close:hover {
  text-shadow: 0px 0px 9px rgba(255, 255, 255, 0.685);
+}
+
+.create-account>.errorMessage {
+ color: rgb(255, 0, 0);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.2rem;
+}
+
+.login>.errorMessage {
+ color: rgb(255, 0, 0);
+ font-family: "Playwrite GB S", cursive;
+ font-optical-sizing: auto;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1.2rem;
 }
