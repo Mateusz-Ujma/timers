@@ -1,8 +1,17 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  inject,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { LoginServices } from '../../../services/login.service';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../../services/auth.service';
 import { FormsModule } from '@angular/forms';
+import { NavigationExtras, Router } from '@angular/router';
+import { routes } from '../../app.routes';
 
 @Component({
   selector: 'app-login-create-account',
@@ -21,6 +30,7 @@ export class LoginCreateAccountComponent {
   repPasswordCA: string = '';
   errorMessageCA: string | null = null;
   errorMessageLogin: string | null = null;
+  router = inject(Router);
 
   @Output() isClose = new EventEmitter<boolean>();
 
@@ -29,14 +39,26 @@ export class LoginCreateAccountComponent {
     // console.log(this.loginVisible);
   }
   register() {
-    this.authS.register(this.emailCA, this.loginCA, this.passwordCA).subscribe({
-      next: () => {},
-      error: (err) => (this.errorMessageCA = err.code),
-    });
+    if (this.loginCA) {
+      this.authS
+        .register(this.emailCA, this.loginCA, this.passwordCA)
+        .subscribe({
+          next: () => {
+            this.router.navigateByUrl('/timers');
+            this.close();
+          },
+          error: (err) => (this.errorMessageCA = err.code),
+        });
+    } else {
+      this.errorMessageCA = 'Enter Login';
+    }
   }
   login() {
     this.authS.login(this.emailLogin, this.passwordLogin).subscribe({
-      next: () => {},
+      next: () => {
+        this.router.navigateByUrl('/timers');
+        this.close();
+      },
       error: (err) => (this.errorMessageLogin = err.code),
     });
   }

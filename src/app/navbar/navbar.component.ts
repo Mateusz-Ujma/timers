@@ -1,10 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, inject, OnInit, Output } from '@angular/core';
 import { TimerServices } from '../../services/timer.service';
 import { AddNewTimerComponent } from '../modals/add-new-timer/add-new-timer.component';
 import { CommonModule } from '@angular/common';
 import { LoginCreateAccountComponent } from '../modals/login-create-account/login-create-account.component';
 import { LoginServices } from '../../services/login.service';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -16,8 +17,9 @@ import { AuthService } from '../../services/auth.service';
 export class NavbarComponent implements OnInit {
   visible: boolean = this.ls.getIsOpen();
   isShowAddTimer = this.ts.getShow();
-
+  router = inject(Router);
   loginVisible: boolean = this.ls.getLoginV();
+
   constructor(
     private ts: TimerServices,
     private ls: LoginServices,
@@ -32,8 +34,12 @@ export class NavbarComponent implements OnInit {
           email: user.email!,
           username: user.displayName!,
         });
+        this.router.navigateByUrl('/timers');
+        console.log('timers');
       } else {
         this.authS.currentUserSig.set(null);
+        this.router.navigateByUrl('');
+        console.log('home');
       }
       console.log(this.authS.currentUserSig());
     });
@@ -54,6 +60,7 @@ export class NavbarComponent implements OnInit {
   }
   logout() {
     this.authS.logout();
+    this.router.navigateByUrl('');
   }
   close(value: boolean) {
     this.ls.setIsOpen(value);
